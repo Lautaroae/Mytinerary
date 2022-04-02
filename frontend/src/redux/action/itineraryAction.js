@@ -5,7 +5,7 @@ const itineraryAction = {
     { console.log(id) }
     return async (dispatch, getState) => {
       const res = await axios.get(
-        `http://localhost:4000/api/allItinerary/${id}`
+        `https://mytinerary-aimonetti-lautaro.herokuapp.com/api/allItinerary/${id}`
       );
       dispatch({
         type: "fetchItineraries",
@@ -16,7 +16,7 @@ const itineraryAction = {
   getItinerary: (id) => {
     return async (dispatch, getState) => {
       const res = await axios.get(
-        "http://localhost:4000/api/allItinerary/" + id
+        "https://mytinerary-aimonetti-lautaro.herokuapp.com/api/allItinerary/" + id
       );
       return res;
     };
@@ -26,7 +26,7 @@ const itineraryAction = {
     return async () => {
       try {
         let response = await axios.put(
-          `http://localhost:4000/api/itinerary/like/${itineraryId}`, {}, {
+          `https://mytinerary-aimonetti-lautaro.herokuapp.com/api/itinerary/like/${itineraryId}`, {}, {
           headers: {
             Authorization: "Bearer " + token,
           },
@@ -43,7 +43,7 @@ const itineraryAction = {
     return async (dispatch, getState) => {
       try {
         const res = await axios.get(
-          `http://localhost:4000/api/itinerary/activity/${itineraryId}`
+          `https://mytinerary-aimonetti-lautaro.herokuapp.com/api/itinerary/activity/${itineraryId}`
         );
         if (res.data.success) {
           dispatch({ type: "GET_ACTIVITIES", payload: res.data.response });
@@ -61,7 +61,7 @@ const itineraryAction = {
     return async (dispatch, getState) => {
       try {
         const res = await axios.get(
-          `http://localhost:4000/api/itinerary/activity`
+          `https://mytinerary-aimonetti-lautaro.herokuapp.com/api/itinerary/activity`
         );
         if (res.data.success) {
           dispatch({ type: "GET_ACTIVITIES", payload: res.data.response });
@@ -78,7 +78,7 @@ const itineraryAction = {
     console.log(comment);
     const token = localStorage.getItem('token')
     return async (dispatch, getState) => {
-      const res = await axios.post('http://localhost:4000/api/allItinerary/comment', { comment }, {
+      const res = await axios.post('https://mytinerary-aimonetti-lautaro.herokuapp.com/api/allItinerary/comment', { comment }, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -99,7 +99,7 @@ const itineraryAction = {
 
     const token = localStorage.getItem('token')
     return async (dispatch, getState) => {
-      const res = await axios.put(`http://localhost:4000/api/allItinerary/comment/${comment.commentID}`, { comment }, {
+      const res = await axios.put(`https://mytinerary-aimonetti-lautaro.herokuapp.com/api/allItinerary/comment/${comment.commentID}`, { comment }, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -120,7 +120,7 @@ const itineraryAction = {
 
     const token = localStorage.getItem('token')
     return async (dispatch, getState) => {
-      const res = await axios.delete(`http://localhost:4000/api/allItinerary/comment/${id}`, {
+      const res = await axios.delete(`https://mytinerary-aimonetti-lautaro.herokuapp.com/api/allItinerary/comment/${id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

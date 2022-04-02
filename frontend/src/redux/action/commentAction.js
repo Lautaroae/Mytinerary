@@ -5,7 +5,7 @@ const commentAction = {
     const token = localStorage.getItem("token");
     return async (dispatch, getState) => {
       const res = await axios.post(
-        "http://localhost:4000/api/allItinerary/comment",
+        "https://mytinerary-aimonetti-lautaro.herokuapp.com/api/allItinerary/comment",
         { comment },
         {
           headers: {
@@ -29,7 +29,7 @@ const commentAction = {
     const token = localStorage.getItem("token");
     return async (dispatch, getState) => {
       const res = await axios.put(
-        "http://localhost:4000/api/allItinerary/comment",
+        "https://mytinerary-aimonetti-lautaro.herokuapp.com/api/allItinerary/comment",
         { comment },
         {
           headers: {
@@ -52,7 +52,7 @@ const commentAction = {
     const token = localStorage.getItem("token");
     return async (dispatch, getState) => {
       const res = await axios.post(
-        `http://localhost:4000/api/allItinerary/comment/${id}`,
+        `https://mytinerary-aimonetti-lautaro.herokuapp.com/api/allItinerary/comment/${id}`,
         {},
         {
           headers: {
