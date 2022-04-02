@@ -1,0 +1,102 @@
+
+const database ="Mytinerary"
+
+use(database);
+
+
+db.ciudades.drop();
+
+
+db.ciudades.insertMany([
+  {
+    "ciudad": "Machu Picchu",
+    "pais": "Peru",
+    "descripcion": "Machu Picchu is the site of an ancient Inca city, high in the Andes of Peru. It was built in the 15th century and then abandoned, and is famous for its stone walls.",
+    "img": "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Jaco",
+    "pais": "Costa Rica",
+    "descripcion": "The tiny village of Jaco. This is the perfect hideaway for sun seekers and active travelers, with tan volcanic sand beaches, lush rainforest and verdant mountains.",
+    "img": "https://images.pexels.com/photos/6775323/pexels-photo-6775323.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Amsterdam",
+    "pais": "Netherlands",
+    "descripcion": "Amsterdam is the capital of the Netherlands, known for its artistic heritage, its elaborate canal system and its narrow gabled houses, legacies of the city's Golden Age during the 17th century.",
+    "img": "https://images.pexels.com/photos/208733/pexels-photo-208733.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Athens",
+    "pais": "Greece",
+    "descripcion": "Athens is the capital of Greece. It was also at the center of ancient Greece, a powerful empire and civilization. In the city, geographical sites from the 5th century BC are still predominant.",
+    "img": "https://images.pexels.com/photos/6527117/pexels-photo-6527117.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Auckland",
+    "pais": "New Zeland",
+    "descripcion": "Auckland, built around 2 major ports, is a major city in the north of the North Island of New Zealand. On central Queen Street, the iconic Sky Tower observation deck overlooks Viaduct Harbour.",
+    "img": "https://wp-growpro.s3-eu-west-1.amazonaws.com/media/2019/11/Experiencias-GrowPro-en-Auckland.jpg"
+  },
+  {
+    "ciudad": "Bangkok",
+    "pais": "Thailand",
+    "descripcion": "it is a sprawling city known for its ornate shrines and bustling street life. The Chao Phraya River, packed with boats, feeds its network of canals and passes through the royal district of Rattanakosin.",
+    "img": "https://images.pexels.com/photos/7060071/pexels-photo-7060071.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Copenhagen",
+    "pais": "Denmark",
+    "descripcion": "It is found on the islands off the coast of Zeeland and Amager. It is connected to Malmo in southern Sweden via the Öresund Bridge. In Indre By, the historic city center, is Frederiksstaden.",
+    "img": "https://images.pexels.com/photos/3117216/pexels-photo-3117216.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Dubrovnik",
+    "pais": "Croatia",
+    "descripcion": "Dubrovnik is a city in southern Croatia facing the Adriatic Sea. It is known for its characteristic Old Town, surrounded by massive stone walls that were completed in the 16th century.",
+    "img": "https://images.pexels.com/photos/3566139/pexels-photo-3566139.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Stockholm",
+    "pais": "Sweden",
+    "descripcion": "The cobblestone streets and ocher-colored buildings of Gamla Stan (the Old Town) are home to Stockholm's 13th-century St. Nicholas Cathedral, the Kungliga Slottet royal palace.",
+    "img": "https://images.pexels.com/photos/3030468/pexels-photo-3030468.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Florence",
+    "pais": "Italy",
+    "descripcion": "Florence is home to several masterpieces of Renaissance architecture and art. One of its most iconic attractions is the Dome, a cathedral with a terracotta tiled dome designed.",
+    "img": "https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Helsinki",
+    "pais": "Finland",
+    "descripcion": "Its central avenue, Mannerheimintie, is lined with institutions such as the National Museum, which traces the history of Finland from the Stone Age to the present day.",
+    "img": "https://images.pexels.com/photos/2311602/pexels-photo-2311602.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Lisbon",
+    "pais": "Portugal",
+    "descripcion": "From the imposing castle of San Jorge, the view encompasses the pastel-colored buildings in the old city, the Tagus estuary, and the 25 de Abril suspension bridge.",
+    "img": "https://images.pexels.com/photos/1534560/pexels-photo-1534560.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Madrid",
+    "pais": "Spain",
+    "descripcion": "Madrid with elegant boulevards and large well-kept parks, such as the Buen Retiro. It is famous for its rich collections of European art, with works by Goya, Velázquez and other Spanish masters.",
+    "img": "https://images.pexels.com/photos/919291/pexels-photo-919291.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Ottawa",
+    "pais": "Canada",
+    "descripcion": "Located on the Ottawa River, at its center is Parliament Hill, with imposing Victorian architecture and museums, such as the National Gallery of Canada, with notable collections.",
+    "img": "https://images.pexels.com/photos/7328/building-architecture-historical-tower.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  },
+  {
+    "ciudad": "Seoul",
+    "pais": "South Korea",
+    "descripcion": "Seoul is a city of museums. The most famous is the National Museum of South Korea, where you will see an exhibition of the country's history from prehistory to the present day. Enormous.",
+    "img": "https://images.pexels.com/photos/1898372/pexels-photo-1898372.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+  }
+]);
+

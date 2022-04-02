@@ -1,0 +1,58 @@
+ 
+                 <>
+  
+        <div className="accordion" id={detailCard?.name}>
+          <div className="accordion-item">
+            <h2 className="accordion-header " id={"heading" + detailCard?.name}>
+              <button className="accordion-button collapsed acordion " type="button" data-bs-toggle="collapse" data-bs-target={"#" + itinerary?.name.replace(/ /g, "").slice(0, 5)} aria-expanded="false" aria-controls={itinerary?.name.replace(/ /g, "").slice(0, 5)}>
+                Comments
+                <span className="material-icons ml-auto arrow collapsed " data-bs-toggle="collapse" aria-controls={itinerary?.name.replace(/ /g, "").slice(0, 5)} data-bs-target={"#" + itinerary?.name.replace(/ /g, "").slice(0, 5)}>
+                  keyboard_arrow_down
+                </span>
+              </button>
+            </h2>
+            <div id={detailCard?.name.replace(/ /g, "").slice(0, 5)} className="accordion-collapse collapse " aria-labelledby={"heading" + detailCard?.name} data-bs-parent={"#" + detailCard?.name}>
+              <div class="accordion-body  ">
+
+              
+                {detailCard?.comments.map(comment =>
+                  <>
+                    {comment.userID?._id !== props.user?.id ?
+                      <div class="card cardComments " key={comment._id}>
+                        <div class="card-header">
+                          {comment.userID?.name}
+                        </div>
+                        <div className="card-body">
+                          <p className="card-text">{comment.comment}</p>
+                        </div>
+                      </div> :
+
+                      <div class="card cardComments">
+                        <div class="card-header">
+                          {comment.userID.name}
+                        </div>
+                        <div class="card-body ">
+                          <textarea type="text" className="card-text textComments" onChange={(event) => setModify(event.target.value)} defaultValue={comment.comment} />
+                          <button id={comment._id} onClick={deleteComment} className="btn btn-primary">Modify</button>
+                          <button id={comment._id} onClick={deleteComment} className="btn btn-primary">Delete</button>
+                        </div>
+                      </div>
+
+                    }
+                  </>
+                )}
+
+                {props.user ?
+                  <div className="card cardComments">
+                    <div className="card-header">
+                    Leave us your comment
+                    </div>
+                    <div class="card-body ">
+                      <textarea onChange={(event) => setInputText(event.target.value)} className="card-text textComments" value={inputTxt} />
+                      <button onClick={addComment} class="btn btn-primary">load</button>
+                    </div>
+                  </div> :
+                  <h1> Make singIn and leave us your comment</h1>
+                }
+            
+           

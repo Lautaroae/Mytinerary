@@ -1,0 +1,102 @@
+const database = "Mytinerary"
+
+use (database);
+db.activities.drop()
+db.activities.insertMany([
+
+{
+
+  "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/84/a9/95.jpg",
+  "title":"Santorini Half-Day Catamaran",
+  "itineraryId":"62290dad3a113a5ebaebdb31"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/a3/f9/c2.jpg",
+  "title":" Photo session Santorini",
+  "itineraryId":"62290dad3a113a5ebaebdb31"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6f/ab/07.jpg",
+  "title":"Day trip to Delphi from Athens",
+  "itineraryId":"62290dad3a113a5ebaebdb31"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/ae/2c/1b.jpg",
+  "title":"Quad Santorini Experience Tour",
+  "itineraryId":"62290f363a113a5ebaebdb33"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/a4/95/6e.jpg",
+  "title":"Day Cruise to Hydra",
+  "itineraryId":"62290f363a113a5ebaebdb33"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/1f/4d.jpg",
+  "title":"Luxury Sailing Cruise",
+  "itineraryId":"62290f363a113a5ebaebdb33"
+},
+
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/b3/8b/65.jpg",
+  "title":"Stockholm City Tour by Vasa VIP ",
+  "itineraryId":"622910773a113a5ebaebdb35"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/39/f8/1c.jpg",
+  "title":"Historical tour ",
+  "itineraryId":"622910773a113a5ebaebdb35"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/7b/2c/00.jpg",
+  "title":"Stockholm Old Town Tour",
+  "itineraryId":"622910773a113a5ebaebdb35"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/09/d8/d8.jpg",
+  "title":"All Inclusive Grand Tour",
+  "itineraryId":"622912d03a113a5ebaebdb37"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/b3/0b/5d.jpg",
+  "title":"Wildlife Safari Small ",
+  "itineraryId":"622912d03a113a5ebaebdb37"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e7/22/33.jpg",
+  "title":"Sweden Culinary Tour ",
+  "itineraryId":"622912d03a113a5ebaebdb37"
+},
+
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/36/56/76.jpg",
+  "title":"Private Peace Tour",
+  "itineraryId":"623a77587dadbea148491a53"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/ab/1d/a1.jpg",
+  "title":"Andong Hahoe Village Tour",
+  "itineraryId":"623a77587dadbea148491a53"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/0d/b9/89.jpg",
+  "title":"Korean cooking class",
+  "itineraryId":"623a77587dadbea148491a53"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0e/1f/ab/f5.jpg",
+  "title":"One day trip to Nami Island",
+  "itineraryId":"623a7bf47dadbea148491a66"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/08/31/6f/d0.jpg",
+  "title":"Jeju West Course Bus Tour",
+  "itineraryId":"623a7bf47dadbea148491a66"
+},
+{
+   "pic": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/03/3f.jpg",
+  "title":"Seúl City-Nanta Show",
+  "itineraryId":"623a7bf47dadbea148491a66"
+},
+
+
+])
